@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Chat App</title>
+   <script src="jquery.js"></script>
+   <script src="socket.io/socket.io.js"></script>
+   <script src="main.js"></script>
+   <link rel="stylesheet" href="bootstrap.css">
+   <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+   <br>
+   <h1 class="d-flex justify-content-center">CHAT APPLICATION</h1>
+   <br>
+
+   <!-- login form  -->
+   <!-- div id=loginform -->
+   <!-- input id = username -->
+   <!-- button id=login -->
+
+   <div id="loginform" class="input-group d-flex justify-content-center">
+      <input type="text" id="username" placeholder="Enter Username">
+      <button id="login" class="btn btn-primary">Login</button>
+   </div>
+
+   <!-- chat display -->
+   <!-- div id=chats -->
+   <!-- ul id=messages -->
+   <div id="chats">
+      <ul id="messages"></ul>
+   </div>
+
+   <!-- messagebox -->
+   <!-- div id=messagebox -->
+   <!-- input id="message" -->
+   <!-- button id="send" -->
+   <div id="messagebox" class="input-group pl-2 pr-2 pb-2">
+
+      <input type="text" id="message" class="form-control" placeholder="Message....">
+      <button id="send" class="btn btn-outline-secondary">SEND</button>
+
+   </div>
+
+</body>
+
+</html>

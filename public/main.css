@@ -1,0 +1,17 @@
+#messagebox {
+   position: absolute;
+   bottom: 0px;
+}
+
+#loginform {
+   z-index: 20;
+}
+
+#chats {
+   position: absolute;
+   border: 1px solid black;
+   top: 90px;
+   bottom: 50px;
+   right: 0;
+   left: 0;
+}
