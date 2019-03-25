@@ -1,21 +1,21 @@
 const socket = io()
 
+function emptyList() {
+   $('#messages').empty()
+   console.log($('#messages') + 'fuck off');
 
-socket.on('chat_received', (data) => {
-
-   console.log('chat recieved')
-   refreshList()
-
-})
+}
 
 
 $(() => {
 
-   refreshList = () => {
+   function refreshList() {
 
-      $('#messages').empty()
-
+      emptyList();
       $.get('/fetch-message', data => {
+         emptyList();
+         console.log('helloworld')
+
          for (let user of data) {
             $('#messages').append(
                $('<li>')
@@ -61,6 +61,16 @@ $(() => {
       refreshList()
 
    })
+
+
+
+   socket.on('chat_received', (data) => {
+
+      console.log('chat recieved')
+      refreshList()
+
+   })
+
 
 
 
