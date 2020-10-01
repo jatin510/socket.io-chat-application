@@ -57,6 +57,7 @@ app.use('/enc',(req,res)=>{
 })
 
 const encrypt = (text = "")=>{
+   console.log(text)
    return text.split("").reverse().join("");
 }
 
