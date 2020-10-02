@@ -48,6 +48,18 @@ io.on('connection', (socket) => {
 
 })
 
+app.use('/enc',(req,res)=>{
+   let user = req.user
+   let msg = req.message
+
+   user && msg && (message = encrypt(message))
+   res.send({result: 'success', data: {message}})
+})
+
+const encrypt = (text = "")=>{
+   console.log(text)
+   return text.split("").reverse().join("");
+}
 
 app.get('/fetch-message', async (req, res) => {
    console.log('message fetching')
